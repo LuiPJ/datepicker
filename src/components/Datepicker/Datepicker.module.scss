@@ -1,0 +1,71 @@
+.datepicker_conteiner {
+  display: flex;
+}
+
+.datapicker {
+  background: #1A1D21;
+  border-radius: 3px 0px 0px 3px;
+  gap: 10px;
+  border-color: #1A1D21;
+  border: 0;
+  outline: 0;
+  padding: 5px 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #D4D7DC;
+}
+
+.calendar {
+  background: #1A1D21;
+  border: 1px solid #373E46;
+  margin-left: 158px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.calender_header {
+  margin: 17px;
+  display: flex;
+  justify-content: space-between,
+}
+
+.calendar_select {
+  padding: 5px 5px 5px 8px;
+  color: #E1E6E9;
+  background: #3D474D;
+  border-radius: 3px;
+  border: none;
+}
+
+.calendar_button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.current_mounth {
+  color: #D4D7DC;
+}
+
+.uncurrent_mounth  {
+  color: #464E59;
+}
+
+.calendar_icon {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 24px 8px;
+  gap: 10px;
+  width: 48px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+  background: #272F3A;
+  border: 1px solid #225599;
+  border-radius: 0px 3px 3px 0px;
+}

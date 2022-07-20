@@ -1,0 +1,35 @@
+// Обращаемся напрямую к классам библиотеки datepicker.
+
+.react-datepicker-wrapper {
+  display: flex;
+  width: auto;
+}
+
+.react-datepicker__header {
+  background-color: #1A1D21 !important;
+  border: 1px solid #373E46;
+  padding: 0;
+}
+
+.react-datepicker__day-name {
+  color: white !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #2C4E7B !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #2C4E7B 
+}
+
+.react-datepicker__triangle {
+  transform: translate(180px, 0px) !important;
+}
+
+.react-datepicker-popper[data-placement^=bottom] 
+.react-datepicker__triangle::before, 
+.react-datepicker-popper[data-placement^=bottom] 
+.react-datepicker__triangle::after {
+  border-bottom-color: #1A1D21;
+}
