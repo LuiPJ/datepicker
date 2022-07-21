@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { customHeader } from './type';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import getYear from 'date-fns/getYear';
-import getMonth from 'date-fns/getYear';
+import getMonth from 'date-fns/getMonth';
 import ru from 'date-fns/locale/ru';
 
 import logo from './static/Vector.png';
@@ -16,12 +16,11 @@ import styles from './Datepicker.module.scss';
 registerLocale('ru', ru);
 
 export default function Datepicker(): JSX.Element {
-  const DatePickerCustomInput = (onClick: any): JSX.Element => (
+  const DatePickerCustomInput = (): JSX.Element => (
     <div className={styles.calendar_icon}>
-      <img src={logo} alt="logo" onClick={onClick} />
+      <img src={logo} alt="logo" />
     </div>
   );
-  const currentDate: Date = new Date();
   const [startDate, setStartDate] = useState(new Date());
   const range = (start: number, end: number): number[] => {
     let ans = [];
@@ -102,12 +101,13 @@ export default function Datepicker(): JSX.Element {
         )}
         className={styles.datapicker}
         calendarClassName={styles.calendar}
+        maxDate={new Date()}
         locale={ru}
-        dateFormat="d MMM yyyy,h:mm:ss"
+        dateFormat="d MMM yyyy,&#8201;h:mm:ss"
         selected={startDate}
         onChange={(date: Date) => setStartDate(date)}
         dayClassName={(date: Date) =>
-          date.getMonth() === currentDate.getMonth()
+          date.getMonth() === startDate.getMonth()
             ? styles.current_mounth
             : styles.uncurrent_mounth
         }
